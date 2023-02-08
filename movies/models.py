@@ -20,6 +20,7 @@ class Movie(models.Model):
     description = models.CharField(max_length=300)
     releaseDate = models.DateField()
     votes = models.IntegerField(default=0)
+    numberOfActors = models.IntegerField(default=1)
 
     def __str__(self):
         return self.title
@@ -28,6 +29,7 @@ class Movie(models.Model):
 class Actor(models.Model):
     name = models.CharField(max_length=100)
     dateOfBirth = models.DateField()
+    numberOfMovies = models.IntegerField(default=1)
 
     def __str__(self):
         return self.name
