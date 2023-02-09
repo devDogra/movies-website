@@ -1,0 +1,25 @@
+.column-names {
+  font-weight: bold;
+  background-color: silver;
+  display: flex;
+  align-items: center;
+}
+span {
+  flex: 1;
+  padding: 0.5rem;
+}
+.description-column {
+  flex: 4;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+}
+ul li {
+  margin: 0;
+
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+  display: flex;
+}

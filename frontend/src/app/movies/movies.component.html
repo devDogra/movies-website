@@ -1,8 +1,21 @@
 <h1>Movies</h1>
 
-<div class="play-container">
-    <p>You've clicked
-        <button (click)="countClick()">Click</button>
-        {{ clickCounter }} times
-    </p>
-</div>
+
+<ul *ngIf="movies">
+
+    <li class="column-names">
+        <span>VOTES</span>
+        <span>TITLE</span>
+        <span>RELEASE DATE</span>
+        <span># ACTORS</span>
+        <span class="description-column">DESCRIPTION</span>
+    </li>
+
+    <li *ngFor="let movie of movies">
+        <span>{{movie.votes}}</span>
+        <span>{{movie.title}}</span>
+        <span>{{movie.releaseDate}}</span>
+        <span>{{movie.numberOfActors}}</span>
+        <span class="description-column">{{movie.description}}</span>
+    </li>
+</ul>

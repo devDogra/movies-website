@@ -1,1 +1,17 @@
-<p>actors works!</p>
+<h1>Actors</h1>
+
+
+<ul *ngIf="actors">
+
+    <li class="column-names">
+        <span>NAME</span>
+        <span>DOB</span>
+        <span># MOVIES</span>
+    </li>
+
+    <li *ngFor="let actor of actors">
+        <span>{{actor.name}}</span>
+        <span>{{actor.dateOfBirth}}</span>
+        <span>{{actor.numberOfMovies}}</span>
+    </li>
+</ul>

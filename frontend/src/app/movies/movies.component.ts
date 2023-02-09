@@ -8,12 +8,9 @@ import { HttpService } from '../http.service';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent {
-  clickCounter = 0;
 
-  countClick(){
-    this.clickCounter += 1; 
-  }
-
+  movies: any
+  
   constructor(private httpService: HttpService) {}
 
   // When component loads (lifecycle hook)
@@ -25,6 +22,7 @@ export class MoviesComponent {
     this.httpService.getMovies().subscribe(
       data => {
         console.log(data); 
+        this.movies = data;
       }
     )
    

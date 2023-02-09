@@ -8,7 +8,11 @@ import { HttpService } from '../http.service';
 })
 export class ActorsComponent {
   // Create an instance (_http) of the service
+  actors : any;
+
+
   constructor(private httpService: HttpService) {}
+
 
   // When component loads (lifecycle hook)
   ngOnInit(){
@@ -19,6 +23,8 @@ export class ActorsComponent {
     this.httpService.getActors().subscribe(
       data => {
         console.log(data); 
+        this.actors = data;
+        console.log(this.actors);
       }
     )
    
