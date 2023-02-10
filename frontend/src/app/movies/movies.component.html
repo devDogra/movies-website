@@ -12,7 +12,11 @@
     </li>
 
     <li *ngFor="let movie of movies">
-        <span>{{movie.votes}}</span>
+        <span>
+            <button>-</button>
+            {{movie.votes}}
+            <button>+</button>
+        </span>
         <span>{{movie.title}}</span>
         <span>{{movie.releaseDate}}</span>
         <span>{{movie.numberOfActors}}</span>

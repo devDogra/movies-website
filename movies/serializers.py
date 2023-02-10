@@ -40,27 +40,3 @@ class MovieSerializer(serializers.ModelSerializer):
 
 
 
-# """
-# i want:
-#  list of movies!!
- 
-# [
-#     {
-#         title: '',
-#         description: '',
-#         releaseDate: '',
-#         numberOfActors: '',
-#         actors: 
-#         [
-#             {
-#                 name: '', 
-#                 dateOfBirth: '',
-#                 numberOfMovies: '',
-#             }
-#         ]
-
-#     }
-
-# ]
-
-# """
