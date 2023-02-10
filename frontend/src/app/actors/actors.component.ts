@@ -7,7 +7,6 @@ import { HttpService } from '../http.service';
   styleUrls: ['./actors.component.css']
 })
 export class ActorsComponent {
-  // Create an instance (_http) of the service
   actors : any;
 
 

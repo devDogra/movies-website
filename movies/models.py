@@ -1,19 +1,17 @@
 from django.db import models
 
-# Create your models here.
 
 """'
-also, ids are generated implicitly
-in django
+Ids are generated implicitly
 
 MOVIE:
-id, title, desc, releasedate, votes, #actors?
+id, title, desc, releasedate, votes, #actors
 
 ACTOR:
-id, name, dob, #movies?
+id, name, dob, #movies
 
 ACTS_IN
-actor_id, movie_id, 
+actor_id, movie_id 
 """
 class Movie(models.Model):
     title = models.CharField(max_length=200)
