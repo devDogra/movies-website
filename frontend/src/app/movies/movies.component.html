@@ -1,7 +1,8 @@
-<h1>Movies</h1>
+<!-- <h1>Movies</h1> -->
 
 
 <ul *ngIf="movies">
+    <h1>Movies</h1>
     <div class="sort-controls">
         <span>By: </span>
         <button (click)="onSort('title')">
@@ -21,7 +22,7 @@
     </li>
 
     <li *ngFor="let movie of movies">
-        <span>
+        <span class="votes-controls">
             <button (click)="onVote(movie.id, movie.votes-1)">-</button>
             {{movie.votes}}
             <button (click)="onVote(movie.id, movie.votes+1)">+</button>
