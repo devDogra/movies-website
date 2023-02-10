@@ -2,8 +2,17 @@
 
 
 <ul *ngIf="movies">
+    <div class="sort-controls">
+        <span>By: </span>
+        <button (click)="onSort('title')">
+            Title
+        </button>
+        <button (click)="onSort('releaseDate')">
+            Release Date
+        </button>
+    </div>
 
-    <li class="column-names">
+    <li class=" column-names">
         <span>VOTES</span>
         <span>TITLE</span>
         <span>RELEASE DATE</span>

@@ -21,13 +21,19 @@ export class MoviesComponent {
     this.getMovies();
   }
 
+  onSort(by : any){
+    this.movies.sort((a :any, b : any) => {
+      return a[by] < b[by]
+    })
+  }
+
   onVote(movieId :any, newVotes : any){
     console.log(movieId, newVotes); 
     this.httpService.setVotes(movieId, newVotes).subscribe(
       data => {
         console.log(data);
         this.getMovies();
-        return {...data, votes: newVotes}
+        // return {...data, votes: newVotes}
       }
     )
   }
