@@ -1,5 +1,6 @@
 
 HOW TO RUN:
+After cloning the repo, and creating the virtual environment
 1) From the project root, activate the virtual environment `. .venv/bin/activate`
 2) Run `python manage.py runserver`
 3) `cd frontend`
