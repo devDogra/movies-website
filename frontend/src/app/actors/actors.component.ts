@@ -13,7 +13,6 @@ export class ActorsComponent {
 
   constructor(private httpService: HttpService) {}
 
-
   // When component loads (lifecycle hook)
   ngOnInit(){
     this.getActors();

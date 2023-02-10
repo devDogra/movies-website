@@ -9,6 +9,9 @@ import { HttpService } from '../http.service';
 })
 export class MoviesComponent {
 
+  // TODO: On click of the +- btn, 
+  // send a PATCH request to update the votes
+
   movies: any
   
   constructor(private httpService: HttpService) {}
@@ -16,6 +19,17 @@ export class MoviesComponent {
   // When component loads (lifecycle hook)
   ngOnInit(){
     this.getMovies();
+  }
+
+  onVote(movieId :any, newVotes : any){
+    console.log(movieId, newVotes); 
+    this.httpService.setVotes(movieId, newVotes).subscribe(
+      data => {
+        console.log(data);
+        this.getMovies();
+        return {...data, votes: newVotes}
+      }
+    )
   }
 
   getMovies(){

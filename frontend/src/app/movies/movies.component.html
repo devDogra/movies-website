@@ -13,9 +13,9 @@
 
     <li *ngFor="let movie of movies">
         <span>
-            <button>-</button>
+            <button (click)="onVote(movie.id, movie.votes-1)">-</button>
             {{movie.votes}}
-            <button>+</button>
+            <button (click)="onVote(movie.id, movie.votes+1)">+</button>
         </span>
         <span>{{movie.title}}</span>
         <span>{{movie.releaseDate}}</span>
