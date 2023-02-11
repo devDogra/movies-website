@@ -1,11 +1,10 @@
 
 HOW TO RUN:
-After cloning the repo, and creating the virtual environment
-1) From the project root, activate the virtual environment `. .venv/bin/activate`
-2) Run `python manage.py runserver`
-3) `cd frontend`
-4) `ng serve -o`
-
+1) After cloning the repo, activate the virtual environment `. .venv/bin/activate`
+2) Install dependencies (requirements.txt, package.json)
+3) Run `python manage.py runserver`
+4) Cd into frontend/
+5) 'ng serve -o
 
 
 Screenshots:
